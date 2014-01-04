@@ -54,10 +54,6 @@ namespace Bolnica.Controllers
         public ActionResult CallBackResult(FormCollection submit)
         {
             StringBuilder sb = new StringBuilder();
-<<<<<<< HEAD
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("E:\\res.txt")) {
-                file.WriteLine(submit["email"]);
-            }
             try
             {
                 SendEmail(submit["text"], submit["email"], "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
@@ -69,9 +65,6 @@ namespace Bolnica.Controllers
                 ViewBag.Result = "failed";
 
             }
-=======
-            ViewBag.Result = "success";
->>>>>>> 1fc643646388f0271191f1c873873263d24ecbe1
             return View(); 
         }
 
