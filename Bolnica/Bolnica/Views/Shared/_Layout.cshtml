@@ -17,16 +17,14 @@
         @*@Styles.Render("~/Content/css")*@
         @Styles.Render("~/bootstrap/css")
         @Scripts.Render("~/bundles/modernizr")
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-        <script src="~/bootstrap/js/bootstrap.min.js"></script>
        
     </head>
    
     <body>
 
         
-        <div class="container">            
+        <div class="container">      
+            <img data-src="~/Images/logo.png/64x64"/>   
             <div id="login">
                 @Html.Partial("_LoginPartial")
             </div>
@@ -50,18 +48,27 @@
                 </div>                
             </nav>
         </div>
-
-        
-
         <div class="row">
-            <div class="col-md-2"></div>
+            <div class="col-md-2">                
+                <div class="thumbnail">
+                     <h4><center>Обратная связь</center></h4>                                               
+                    <img src="~/Images/callback.jpg" alt="...">
+                    <div class="caption">
+                        <p><center>
+                            <a href="~/Home/CallBack" class="btn btn-primary" role="button">Написать письмо</a> 
+                        </center>
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-8">
                 <div id="body">
                     @RenderSection("featured", required: false)
-                    <section>
+                    <section class="content-wrapper main-content clear-fix">
                         @RenderBody()
                     </section>
                 </div>
+        
             </div>   
             <div class="col-md-2">
                 <div class="thumbnail">
@@ -73,8 +80,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="thumbnail">
-                    
+                <div class="thumbnail">                    
                     <h4>Всемирный день борьбы против бешенства.</h4>   
                     <img src="~/Images/Articles/beshenstvo.jpg" alt="...">
                     <div class="caption"> 
@@ -102,7 +108,9 @@
                     </center>
                 </div>
         </footer>
-        
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+        <script src="~/bootstrap/js/bootstrap.min.js"></script>
 
 
     </body>

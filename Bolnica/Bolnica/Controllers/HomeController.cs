@@ -46,5 +46,9 @@ namespace Bolnica.Controllers
         public ActionResult Doctors() {
             return View();
         }
+
+        public ActionResult CallBack() {
+            return View();
+        }
     }
 }
