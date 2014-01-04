@@ -52,9 +52,6 @@ namespace Bolnica.Controllers
         public ActionResult CallBackResult(FormCollection submit)
         {
             StringBuilder sb = new StringBuilder();
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter("E:\\res.txt")) {
-                file.WriteLine(submit["email"]);
-            }
             ViewBag.Result = "success";
             return View(); 
         }
