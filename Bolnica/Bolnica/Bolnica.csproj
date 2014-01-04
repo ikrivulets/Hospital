@@ -188,6 +188,7 @@
     <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\SubdivisionController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -417,6 +418,12 @@
     <Content Include="Views\Article\Index.cshtml" />
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Home\CallBack.cshtml" />
+    <Content Include="Views\Service\Immunization.cshtml" />
+    <Content Include="Views\Service\Massage.cshtml" />
+    <Content Include="Views\Service\Fito.cshtml" />
+    <Content Include="Views\Service\ProphView.cshtml" />
+    <Content Include="Views\Service\Consultation.cshtml" />
+    <Content Include="Views\Service\Research.cshtml" />
     <Content Include="Views\Home\CallBackResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
