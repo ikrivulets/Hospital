@@ -7,20 +7,16 @@
 
 
 <fieldset>
-    <legend>Article</legend>
-    <div class="display-field">
-        
-    </div>
-    <div class="display-field">
+    <div class="jumbotron">
         @Model.Date.ToShortDateString() <h3>@Html.DisplayFor(model => model.Name)</h3>        
     </div>
 
     
 
-    <div class="display-field">
-        @hs
+    <div class="well">       
+        <p>@hs</p>  
     </div>
 </fieldset>
-<p>
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<a type="button" class="btn btn-default btn-lg pull-center" href="~/Article/Index">
+    <span class="glyphicon glyphicon-backward"></span> К списку статей
+</a>
