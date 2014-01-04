@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "CallBack";
+}
+
+<h2>CallBack</h2>
+
+<div class="col-md-8 col-md-offset-2">
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Email адрес</label>
+            <input type="email" class="form-control" id="email" placeholder="Введите контактный email">
+        </div>
+        <div class="form-group">
+            <label for="fio">ФИО</label>
+            <input type="text" class="form-control" id="fio" placeholder="ФИО">
+        </div>
+        <div class="form-group">            
+            <label for="text">Текст письма</label>
+            <textarea class="form-control" id="text" rows="7" placeholder="Пишите здесь" style="resize:none; width:560px"></textarea>
+        </div>    
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <p>Соглашение 
+                    <a class="btn btn-default btn-xs">                    
+                        <span class="glyphicon glyphicon-arrow-down"></span>читать
+                    </a>
+                </p>
+            </div>
+            <div class="panel-body hidden">
+                <p>allalalala</p>
+            </div>
+        </div> 
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Согласен
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Отправить</button>
+    </form>
+</div>
