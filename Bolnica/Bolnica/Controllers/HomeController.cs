@@ -24,7 +24,7 @@ namespace Bolnica.Controllers
 
         public ActionResult Schedule()
         {
-            ViewBag.Message = "Your service page.";
+            ViewBag.Message = "Your schedule.";
 
             return View();
         }
