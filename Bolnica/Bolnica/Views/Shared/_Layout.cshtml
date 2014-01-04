@@ -17,6 +17,9 @@
         @*@Styles.Render("~/Content/css")*@
         @Styles.Render("~/bootstrap/css")
         @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+        <script src="~/bootstrap/js/bootstrap.min.js"></script>
        
     </head>
    
@@ -48,6 +51,9 @@
                 </div>                
             </nav>
         </div>
+
+        
+
         <div class="row">
             <div class="col-md-2">                
                 <div class="thumbnail">
@@ -64,11 +70,10 @@
             <div class="col-md-8">
                 <div id="body">
                     @RenderSection("featured", required: false)
-                    <section class="content-wrapper main-content clear-fix">
+                    <section>
                         @RenderBody()
                     </section>
                 </div>
-        
             </div>   
             <div class="col-md-2">
                 <div class="thumbnail">
@@ -80,7 +85,12 @@
                         </p>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="thumbnail">                    
+=======
+                <div class="thumbnail">
+                    
+>>>>>>> ed2f636b9c05fbe58d0937a684b0fc9ebd47251a
                     <h4>Всемирный день борьбы против бешенства.</h4>   
                     <img src="~/Images/Articles/beshenstvo.jpg" alt="...">
                     <div class="caption"> 
@@ -108,9 +118,7 @@
                     </center>
                 </div>
         </footer>
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-        <script src="~/bootstrap/js/bootstrap.min.js"></script>
+        
 
 
     </body>
