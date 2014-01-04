@@ -1,0 +1,26 @@
+﻿@model Bolnica.Models.Article
+
+@{
+    ViewBag.Title = "Article";
+    HtmlString hs = new HtmlString(Model.Content);
+}
+
+
+<fieldset>
+    <legend>Article</legend>
+    <div class="display-field">
+        
+    </div>
+    <div class="display-field">
+        @Model.Date.ToShortDateString() <h3>@Html.DisplayFor(model => model.Name)</h3>        
+    </div>
+
+    
+
+    <div class="display-field">
+        @hs
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
