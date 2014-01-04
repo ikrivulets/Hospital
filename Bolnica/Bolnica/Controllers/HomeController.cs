@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -46,6 +47,19 @@ namespace Bolnica.Controllers
         public ActionResult Doctors() {
             return View();
         }
+        
+        [HttpPost]
+        public ActionResult CallBackResult(FormCollection submit)
+        {
+            StringBuilder sb = new StringBuilder();
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter("E:\\res.txt")) {
+                file.WriteLine(submit["email"]);
+            }
+            ViewBag.Result = "success";
+            return View(); 
+        }
+
+
 
         public ActionResult CallBack() {
             return View();

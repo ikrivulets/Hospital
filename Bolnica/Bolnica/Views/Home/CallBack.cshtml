@@ -5,10 +5,10 @@
 <h2>CallBack</h2>
 
 <div class="col-md-8 col-md-offset-2">
-    <form role="form">
+    <form role="form" action="~/Home/CallBackResult" method="post">
         <div class="form-group">
             <label for="email">Email адрес</label>
-            <input type="email" class="form-control" id="email" placeholder="Введите контактный email">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Введите контактный email">
         </div>
         <div class="form-group">
             <label for="fio">ФИО</label>
@@ -33,8 +33,8 @@
         <div class="checkbox">
             <label>
                 <input type="checkbox"> Согласен
-            </label>
-        </div>
-        <button type="submit" class="btn btn-default">Отправить</button>
+            </label>             
+       </div>
+        <input type="submit" class="btn btn-default" value="Отправить">
     </form>
 </div>
