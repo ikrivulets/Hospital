@@ -429,6 +429,7 @@
     <Content Include="Views\Home\DoctorRequest.cshtml" />
     <Content Include="Views\Home\DoctorRequestResult.cshtml" />
     <Content Include="Views\Home\TicketRequest.cshtml" />
+    <Content Include="Views\Home\TicketRequestResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
