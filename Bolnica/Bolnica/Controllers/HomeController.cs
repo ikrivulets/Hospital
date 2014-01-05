@@ -53,10 +53,10 @@ namespace Bolnica.Controllers
         [HttpPost]
         public ActionResult CallBackResult(FormCollection submit)
         {
-            StringBuilder sb = new StringBuilder();
             try
             {
-                SendEmail(submit["text"], submit["email"], "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
+                string msg = submit["text"] + " Mail: " + submit["email"];
+                SendEmail(msg, "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
 
                 ViewBag.Result = "success";
             }
@@ -73,16 +73,33 @@ namespace Bolnica.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult DoctorRequestResult(FormCollection submit) {
+            try
+            {
+                String msg = submit["text"] + " Номер телефона: " + submit["phone"] + " Адрес: " + submit["address"];
+                SendEmail(msg, "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
+
+                ViewBag.Result = "success";
+            }
+            catch
+            {
+                ViewBag.Result = "failed";
+
+            }
+            return View();
+        }
+
         public ActionResult CallBack() {
             return View();
         }
 
-        public void SendEmail(string msgBody, string sendTo, string sendFrom, string subject, string toName)
+        public void SendEmail(string msgBody, string sendFrom, string subject, string toName)
         {
             var fromAddress = new MailAddress(sendFrom, toName);
             var toAddress = new MailAddress(sendFrom, "Sviclochskaya central'naya gorodskaya bolnica");
             const string fromPassword = "6092726moiNOMER*";
-            string body = msgBody + " My mail: " + sendTo;
+            string body = msgBody;
 
             var smtp = new SmtpClient
             {
