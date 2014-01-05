@@ -2,5 +2,21 @@
     ViewBag.Title = "DoctorRequestResult";
 }
 
-<h2>DoctorRequestResult</h2>
-@ViewBag.Result
+<h2>Резальтат запроса на талон</h2>
+
+@if (ViewBag.Result == "success"){
+    <div class="jumbotron">
+        <div class="alert alert-success">Спасибо! Ваше письмо успешно отправлено!</div>
+        <a class="btn btn-success" href="~/Home/Index">
+            <span class="glyphicon glyphicon-backward"></span>
+            Вернуться на главную
+        </a>
+    </div>
+}
+else { 
+    <div class="jumbotron">
+        <div class="alert alert-danger">Извините, но ваше письмо не достигло цели. Возможно, вы что-то сделали не так.</div>
+        <a class="btn btn-danger" href="~/Home/Index">Вернуться на главную</a>
+        <a class="btn btn-danger" href="~/Home/CallBack">Попробовать еще!</a>
+    </div>
+}

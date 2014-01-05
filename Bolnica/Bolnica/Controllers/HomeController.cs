@@ -61,7 +61,7 @@ namespace Bolnica.Controllers
         {
             try
             {
-                string msg = submit["text"] + " Mail: " + submit["email"];
+                string msg = submit["text"] + "; Mail: " + submit["email"];
                 SendEmail(msg, "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
 
                 ViewBag.Result = "success";
@@ -83,8 +83,8 @@ namespace Bolnica.Controllers
         public ActionResult DoctorRequestResult(FormCollection submit) {
             try
             {
-                String msg = submit["text"] + " Номер телефона: " + submit["phone"] + " Адрес: " + submit["address"];
-                SendEmail(msg, "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
+                String msg = submit["text"] + "; Номер телефона: " + submit["phone"] + "; Адрес: " + submit["address"];
+                SendEmail(msg, "matvei.nazaruk@gmail.com", "doctor request", submit["fio"]);
 
                 ViewBag.Result = "success";
             }
@@ -105,8 +105,9 @@ namespace Bolnica.Controllers
         {
             try
             {
-                String msg = submit["text"] + " Номер телефона: " + submit["phone"] + " Адрес: " + submit["address"];
-                SendEmail(msg, "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
+                String msg = submit["fio"] + "; Номер телефона: " + submit["phone"] +
+                      "; На дату: " + submit["date"] + "; время: " + submit["time"] + "; к: " + submit["doctor"]; 
+                SendEmail(msg, "matvei.nazaruk@gmail.com", "ticket request", submit["fio"]);
 
                 ViewBag.Result = "success";
             }
