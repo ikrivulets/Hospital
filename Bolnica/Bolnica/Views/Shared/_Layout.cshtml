@@ -17,23 +17,7 @@
         @Styles.Render("~/bootstrap/css")        
         @Scripts.Render("~/bundles/modernizr")
         <style type="text/css">
-           .styleLogIn {
-               vertical-align:top;
-               margin:20%;
-               float:right;
-               text-align:right;
-<<<<<<< HEAD
-               vertical-align:top;
-
-           }
-           .styleLogo {
-               text-align:left;
-=======
->>>>>>> 48752abce3f38984623895f547b962012852c9f2
-           }
-           .styleAddress {
-               text-align:right;
-           }
+           
            .styleMenu {
                text-align:center;
                font-size:18px;
@@ -55,32 +39,27 @@
     </head>
     <body class="styleBG" >       
         <div class="container">   
-<<<<<<< HEAD
-            <div>  
-                <div class="styleLogo">
-                                <img src="~/Images/logo.gif">
-                            </div>
-               
-                
-                
-                <div class="styleLogIn">
-                        <div id="login">
-                            @Html.Partial("_LoginPartial")
-                        </div>
-=======
+
             <div>   
                 <div class="container">
-                    <div class="col-md-9">
+                    <div class="col-md-3">
                         <img src="~/Images/logo.gif">
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <strong>Cвислочская центральная районная больница</strong><br />
+                            231960<br/>
+                            г.Свислочь, ул.17 Сентября, 3<br />
+                            <strong>Тел </strong>8-01513-33557<br />
+                            <strong>Email </strong>svis@tut.by
+                        </p>
                     </div>
                     <div class="col-md-3">
                         @Html.Partial("_LoginPartial")
                     </div>
->>>>>>> 48752abce3f38984623895f547b962012852c9f2
                 </div>
             </div>
             <nav class="navbar navbar-ourStyle" role="navigation">
-               @* <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*@
                     <ul class="nav navbar-nav styleMenu">
                         <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                         <li class="dropdown">
@@ -95,8 +74,7 @@
                         <li>@Html.ActionLink("График приема","Schedule","Home")</li>
                         <li>@Html.ActionLink("Новости", "Index", "Article")</li>
                         <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>  
-                    </ul>                    
-               @* </div>   *@             
+                    </ul>                 
             </nav>
         
         <div class="row">
