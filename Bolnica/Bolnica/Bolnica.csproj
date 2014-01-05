@@ -425,6 +425,7 @@
     <Content Include="Views\Service\Consultation.cshtml" />
     <Content Include="Views\Service\Research.cshtml" />
     <Content Include="Views\Home\CallBackResult.cshtml" />
+    <Content Include="Views\Home\DoctorRequest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
