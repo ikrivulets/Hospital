@@ -8,33 +8,34 @@
     <form role="form" action="~/Home/CallBackResult" method="post">
         <div class="form-group">
             <label for="email">Email адрес</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Введите контактный email">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Введите контактный email" required>
         </div>
         <div class="form-group">
             <label for="fio">ФИО</label>
-            <input type="text" class="form-control" id="fio" placeholder="ФИО">
+            <input type="text" class="form-control" id="fio" placeholder="ФИО" required>
         </div>
         <div class="form-group">            
             <label for="text">Текст письма</label>
-            <textarea class="form-control" id="text" name="text" rows="7" placeholder="Пишите здесь" style="resize:none; width:560px"></textarea>
+            <textarea class="form-control" id="text" name="text" rows="7" placeholder="Пишите здесь" style="resize:none; width:560px" required></textarea>
         </div>    
         <div class="panel panel-default">
             <div class="panel-heading">
                 <p>Соглашение 
-                    <a class="btn btn-default btn-xs">                    
+                    <a class="btn btn-default btn-xs show-button">                    
                         <span class="glyphicon glyphicon-arrow-down"></span>читать
                     </a>
                 </p>
             </div>
-            <div class="panel-body hidden">
+            <div class="panel-body hidden" id="hidden-text">
                 <p>allalalala</p>
             </div>
         </div> 
-        <div class="checkbox">
+        <div class="checkbox" >
             <label>
-                <input type="checkbox"> Согласен
+                <input type="checkbox" required> Согласен
             </label>             
        </div>
         <input type="submit" class="btn btn-default" value="Отправить">
     </form>
+    <script src="~/Scripts/MyScripts.js"></script>
 </div>
