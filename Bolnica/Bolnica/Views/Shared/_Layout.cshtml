@@ -32,7 +32,7 @@
                 @Html.Partial("_LoginPartial")
             </div>
                 </div>
-            <nav class="navbar navbar-default" role="navigation">
+            <nav class="navbar navbar-inner" role="navigation">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Главная", "Index", "Home")</li>
@@ -59,7 +59,10 @@
                     <img src="~/Images/callback.jpg" alt="...">
                     <div class="caption">
                         <p><center>
-                            <a href="~/Home/CallBack" class="btn btn-primary" role="button">Написать письмо</a> 
+                            <a href="~/Home/CallBack" class="btn btn-primary" role="button">
+                                <i class="icon-white icon-envelope"></i>
+                                Написать письмо
+                            </a> 
                         </center>
                         </p>
                     </div>
