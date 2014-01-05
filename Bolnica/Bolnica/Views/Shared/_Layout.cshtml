@@ -17,20 +17,21 @@
         @*@Styles.Render("~/Content/css")*@
         @Styles.Render("~/bootstrap/css")
         @Scripts.Render("~/bundles/modernizr")
-       
+        <style type="text/css">
+           .styleLogIn {
+               text-align:right;
+           }   
+        </style>
     </head>
-   <style type="text/css">
 
-       </style>
+   
+
     <body>
 
         
         <div class="container">      
-<<<<<<< HEAD
 
-=======
->>>>>>> a53a49cde594654a4f507b515c78ddcb4c86e580
-            <div id="login">
+            <div class="styleLogIn">
                 @Html.Partial("_LoginPartial")
             </div>
             <nav class="navbar navbar-default" role="navigation">
