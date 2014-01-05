@@ -33,6 +33,16 @@
             .styleBG {
                 background-image:url(/Images/operabg.png);
             }
+            footer {
+                bottom: 1px;
+                height: 40px;
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                border-top:2px solid #6ce6d5;
+                background: #eee;
+                z-index: 100;
+            }
         </style>
         <style type="text/css">
             body {
@@ -46,24 +56,16 @@
     <body class="styleBG" >
 
         
-<<<<<<< HEAD
         <div class="container">   
             <div>   
                 <div class="styleLogo">
                     <img src="~/Images/logo.gif">
-=======
-        <div class="container bgcont">      
-            <div class="styleLogIn">
-                <div id="login">
-                    @Html.Partial("_LoginPartial")
->>>>>>> 989a077e1ca3a7cfff302cda2f0acf6a6f50e51f
-                </div>
-                <div class="styleLogIn">
-                    <div id="login">
-                        @Html.Partial("_LoginPartial")
+                    <div class="styleLogIn">
+                        <div id="login">
+                            @Html.Partial("_LoginPartial")
+                        </div>
                     </div>
                 </div>
-
             </div>
             <nav class="navbar navbar-ourStyle" role="navigation">
                @* <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*@
@@ -169,11 +171,7 @@
         </div>
 
         <footer>
-                <div class="well well-sm">
-                    <center>
-                        <p class="text-muted"> &copy; 2014 -Гродненская городская больница</p>
-                    </center>
-                </div>
+                <p class="text-muted"> &copy; 2014 -Гродненская городская больница</p>
         </footer>
             </div>
         @Scripts.Render("~/bundles/jquery")

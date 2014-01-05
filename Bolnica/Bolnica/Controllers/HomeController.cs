@@ -115,7 +115,7 @@ namespace Bolnica.Controllers
             {
                 ViewBag.Result = "failed";
 
-            }
+            } 
             return View();
         }
 
