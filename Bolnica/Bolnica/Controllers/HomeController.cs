@@ -49,7 +49,13 @@ namespace Bolnica.Controllers
         public ActionResult Doctors() {
             return View();
         }
-        
+
+
+        public ActionResult CallBack()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult CallBackResult(FormCollection submit)
         {
@@ -90,9 +96,28 @@ namespace Bolnica.Controllers
             return View();
         }
 
-        public ActionResult CallBack() {
+        public ActionResult TicketRequest() {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult TicketRequestResult(FormCollection submit)
+        {
+            try
+            {
+                String msg = submit["text"] + " Номер телефона: " + submit["phone"] + " Адрес: " + submit["address"];
+                SendEmail(msg, "matvei.nazaruk@gmail.com", "callback", submit["fio"]);
+
+                ViewBag.Result = "success";
+            }
+            catch
+            {
+                ViewBag.Result = "failed";
+
+            }
+            return View();
+        }
+
 
         public void SendEmail(string msgBody, string sendFrom, string subject, string toName)
         {

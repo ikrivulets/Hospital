@@ -15,12 +15,11 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @*@Styles.Render("~/Content/css")*@
-        @Styles.Render("~/bootstrap/css")
+        @Styles.Render("~/bootstrap/css")        
         @Scripts.Render("~/bundles/modernizr")
        
     </head>
    <style type="text/css">
-
        </style>
     <body>
 
@@ -68,6 +67,17 @@
                     <div class="caption">
                         <p><center>
                             <a href="~/Home/DoctorRequest" class="btn btn-primary" role="button">Послать запрос</a> 
+                        </center>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="thumbnail">
+                     <h4><center>Запрос на талон к врачу</center></h4>                                               
+                    <img src="~/Images/doctrecieve.png" alt="...">
+                    <div class="caption">
+                        <p><center>
+                            <a href="~/Home/TicketRequest" class="btn btn-primary" role="button">Запросить</a> 
                         </center>
                         </p>
                     </div>
