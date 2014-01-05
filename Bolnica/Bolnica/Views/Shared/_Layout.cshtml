@@ -24,8 +24,12 @@
 
         
         <div class="container">      
+<<<<<<< HEAD
             <img data-src="~/Images/logo.png/64x64"/>   
             <div  id="login">
+=======
+            <div id="login">
+>>>>>>> 2d1d9a10a66fbf09c609f599afe126b1746388ff
                 @Html.Partial("_LoginPartial")
             </div>
             <nav class="navbar navbar-default" role="navigation">
@@ -56,6 +60,17 @@
                     <div class="caption">
                         <p><center>
                             <a href="~/Home/CallBack" class="btn btn-primary" role="button">Написать письмо</a> 
+                        </center>
+                        </p>
+                    </div>
+                </div>
+                             
+                <div class="thumbnail">
+                     <h4><center>Вызвать врача</center></h4>                                               
+                    <img src="~/Images/doctorcall.jpeg" alt="...">
+                    <div class="caption">
+                        <p><center>
+                            <a href="~/Home/DoctorRequest" class="btn btn-primary" role="button">Послать запрос</a> 
                         </center>
                         </p>
                     </div>
@@ -111,7 +126,5 @@
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
         <script src="~/bootstrap/js/bootstrap.min.js"></script>
-
-
     </body>
 </html>

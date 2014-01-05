@@ -69,6 +69,9 @@ namespace Bolnica.Controllers
         }
 
 
+        public ActionResult DoctorRequest() {
+            return View();
+        }
 
         public ActionResult CallBack() {
             return View();
