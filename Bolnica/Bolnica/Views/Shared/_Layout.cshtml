@@ -19,22 +19,36 @@
         <style type="text/css">
            .styleLogIn {
                text-align:right;
+               text-anchor:start;
+
+           }
+           .styleLogo {
+               text-align:left;
            }
            .styleMenu {
                text-align:center;
                font-size:18px;
                font-family: Calibri;
-           }    
+           }
+            .styleBG {
+                background-image:url(/Images/operabg.png);
+            }
         </style>
     </head>
-    <body>
+    <body class="styleBG" >
 
         
-        <div class="container">      
-            <div class="styleLogIn">
-                <div id="login">
-                    @Html.Partial("_LoginPartial")
+        <div class="container">   
+            <div>   
+                <div class="styleLogo">
+                    <img src="~/Images/logo.gif">
                 </div>
+                <div class="styleLogIn">
+                    <div id="login">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+
             </div>
             <nav class="navbar navbar-ourStyle" role="navigation">
                @* <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*@
