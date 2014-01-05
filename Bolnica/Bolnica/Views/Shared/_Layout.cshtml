@@ -20,7 +20,12 @@
         <style type="text/css">
            .styleLogIn {
                text-align:right;
-           }   
+           }
+           .styleMenu {
+               text-align:center;
+               font-size:18px;
+               font-family: Calibri;
+           }    
         </style>
     </head>
     <body>
@@ -28,13 +33,13 @@
         
         <div class="container">      
             <div class="styleLogIn">
-            <div id="login">
-                @Html.Partial("_LoginPartial")
-            </div>
+                <div id="login">
+                    @Html.Partial("_LoginPartial")
                 </div>
-            <nav class="navbar navbar-inner" role="navigation">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+            </div>
+            <nav class="navbar navbar-ourStyle" role="navigation">
+               @* <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*@
+                    <ul class="nav navbar-nav styleMenu">
                         <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">О больнице <b class="caret"></b></a>
@@ -49,11 +54,11 @@
                         <li>@Html.ActionLink("Новости", "Index", "Article")</li>
                         <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>  
                     </ul>                    
-                </div>                
+               @* </div>   *@             
             </nav>
         
         <div class="row">
-            <div class="col-md-2">                
+            <div class="col-md-2">           
                 <div class="thumbnail">
                      <h4><center>Обратная связь</center></h4>                                               
                     <img src="~/Images/callback.jpg" alt="...">
