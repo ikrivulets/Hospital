@@ -17,17 +17,29 @@
         @*@Styles.Render("~/Content/css")*@
         @Styles.Render("~/bootstrap/css")        
         @Scripts.Render("~/bundles/modernizr")
-       
+        <style type="text/css">
+           .styleLogIn {
+               text-align:right;
+           }   
+        </style>
     </head>
+<<<<<<< HEAD
    <style type="text/css">
        </style>
+=======
+
+   
+
+>>>>>>> fae470dfa8079238f0f5c23110c0ab0548a57745
     <body>
 
         
         <div class="container">      
+            <div class="styleLogIn">
             <div id="login">
                 @Html.Partial("_LoginPartial")
             </div>
+                </div>
             <nav class="navbar navbar-default" role="navigation">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -47,7 +59,7 @@
                     </ul>                    
                 </div>                
             </nav>
-        </div>
+        
         <div class="row">
             <div class="col-md-2">                
                 <div class="thumbnail">
@@ -83,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 danger">
+            <div class="col-md-8">
 
                 <div >
                     <section >
@@ -130,6 +142,7 @@
                     </center>
                 </div>
         </footer>
+            </div>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
         <script src="~/bootstrap/js/bootstrap.min.js"></script>
