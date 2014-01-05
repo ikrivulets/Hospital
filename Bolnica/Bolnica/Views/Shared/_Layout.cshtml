@@ -19,11 +19,17 @@
         @Scripts.Render("~/bundles/modernizr")
        
     </head>
-   
+   <style type="text/css">
+
+       </style>
     <body>
 
         
         <div class="container">      
+<<<<<<< HEAD
+
+=======
+>>>>>>> a53a49cde594654a4f507b515c78ddcb4c86e580
             <div id="login">
                 @Html.Partial("_LoginPartial")
             </div>
@@ -71,10 +77,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <div id="body">
-                    @RenderSection("featured", required: false)
-                    <section class="content-wrapper main-content clear-fix">
+            <div class="col-md-8 danger">
+
+                <div >
+                    <section >
                         @RenderBody()
                     </section>
                 </div>
