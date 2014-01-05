@@ -18,12 +18,18 @@
         @Scripts.Render("~/bundles/modernizr")
         <style type="text/css">
            .styleLogIn {
+               vertical-align:top;
+               margin:20%;
+               float:right;
                text-align:right;
+<<<<<<< HEAD
                vertical-align:top;
 
            }
            .styleLogo {
                text-align:left;
+=======
+>>>>>>> 48752abce3f38984623895f547b962012852c9f2
            }
            .styleAddress {
                text-align:right;
@@ -42,7 +48,6 @@
                 width: 100%;
                 margin: 0 auto;
                 text-align: center;
-                border-top:2px solid #6ce6d5;
                 background: #eee;
                 z-index: 100;
             }
@@ -50,6 +55,7 @@
     </head>
     <body class="styleBG" >       
         <div class="container">   
+<<<<<<< HEAD
             <div>  
                 <div class="styleLogo">
                                 <img src="~/Images/logo.gif">
@@ -61,6 +67,16 @@
                         <div id="login">
                             @Html.Partial("_LoginPartial")
                         </div>
+=======
+            <div>   
+                <div class="container">
+                    <div class="col-md-9">
+                        <img src="~/Images/logo.gif">
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Partial("_LoginPartial")
+                    </div>
+>>>>>>> 48752abce3f38984623895f547b962012852c9f2
                 </div>
             </div>
             <nav class="navbar navbar-ourStyle" role="navigation">
@@ -84,7 +100,20 @@
             </nav>
         
         <div class="row">
-            <div class="col-md-2">           
+            <div class="col-md-2">     
+                <div class="thumbnail">
+                     <h4><center>Запрос на талон к врачу</center></h4>                                               
+                    <img src="~/Images/doctrecieve.png" alt="...">
+                    <div class="caption">
+                        <p><center>
+                            <a href="~/Home/TicketRequest" class="btn btn-primary" role="button">
+                                <span class="glyphicon glyphicon-file"></span>
+                                Запросить
+                            </a> 
+                        </center>
+                        </p>
+                    </div>
+                </div>      
                 <div class="thumbnail">
                      <h4><center>Обратная связь</center></h4>                                               
                     <img src="~/Images/callback.jpg" alt="...">
@@ -110,21 +139,7 @@
                         </center>
                         </p>
                     </div>
-                </div>
-
-                <div class="thumbnail">
-                     <h4><center>Запрос на талон к врачу</center></h4>                                               
-                    <img src="~/Images/doctrecieve.png" alt="...">
-                    <div class="caption">
-                        <p><center>
-                            <a href="~/Home/TicketRequest" class="btn btn-primary" role="button">
-                                <span class="glyphicon glyphicon-file"></span>
-                                Запросить
-                            </a> 
-                        </center>
-                        </p>
-                    </div>
-                </div>
+                </div>                
             </div>
             <div class="col-md-8">
 
@@ -166,10 +181,10 @@
             </div>
         </div>
 
+            </div>
         <footer>
                 <p class="text-muted"> &copy; 2014 -Гродненская городская больница</p>
         </footer>
-            </div>
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
         <script src="~/bootstrap/js/bootstrap.min.js"></script>
