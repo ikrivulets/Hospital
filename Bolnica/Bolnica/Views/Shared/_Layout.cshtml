@@ -19,17 +19,15 @@
         @Scripts.Render("~/bundles/modernizr")
        
     </head>
-   
+   <style type="text/css">
+
+       </style>
     <body>
 
         
         <div class="container">      
-<<<<<<< HEAD
-            <img data-src="~/Images/logo.png/64x64"/>   
-            <div  id="login">
-=======
+
             <div id="login">
->>>>>>> 2d1d9a10a66fbf09c609f599afe126b1746388ff
                 @Html.Partial("_LoginPartial")
             </div>
             <nav class="navbar navbar-default" role="navigation">
@@ -76,10 +74,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <div id="body">
-                    @RenderSection("featured", required: false)
-                    <section class="content-wrapper main-content clear-fix">
+            <div class="col-md-8 danger">
+
+                <div >
+                    <section >
                         @RenderBody()
                     </section>
                 </div>
